@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/folio/static/js/main.bcb60039.js",
+    "index.html": "/folio/index.html",
+    "main.bcb60039.js.map": "/folio/static/js/main.bcb60039.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.bcb60039.js"
+  ]
+}
