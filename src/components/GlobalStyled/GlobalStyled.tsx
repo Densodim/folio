@@ -9,7 +9,9 @@ export const GlobalStyled = createGlobalStyle`
     }
     body{
         font-family: 'Poppins', sans-serif;
-        background-color: black;
+        background: radial-gradient(black, #141414);
         color: white;
+        display: grid;
+
     }
-`
+`;
