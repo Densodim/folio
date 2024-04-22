@@ -4,14 +4,14 @@ export const GlobalStyled = createGlobalStyle`
     *,
     *::before,
     *::after {
-        padding: 0px;
-        margin: 0px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
     body{
-        font-family: 'Poppins', sans-serif;
-        background: radial-gradient(black, #141414);
-        color: white;
-        display: grid;
-
+        font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
+        background-color: #EDE5FF;
+        transition: 0.3s background-color;
     }
 `;
