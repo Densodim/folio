@@ -3,6 +3,29 @@ import styled from "styled-components";
 import { Thema } from "../Thema/Thema.tsx";
 
 export const Header = (props) => {
+  const MENU = [
+    {
+      title: "Home",
+      url: "#home",
+    },
+    {
+      title: "Servise",
+      url: "#services",
+    },
+    {
+      title: "Skills",
+      url: "#skills",
+    },
+    {
+      title: "Portfolio",
+      url: "#portfolio",
+    },
+    {
+      title: "Contact",
+      url: "#contact",
+    },
+  ];
+
   return (
     <>
       <header>
@@ -13,49 +36,15 @@ export const Header = (props) => {
             </a>
           </Logo>
           <Links>
-            <ul>
-              <li>
-                <a href="#home" id="nav-link__one">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#services" id="nav-link__two">
-                  Servise
-                </a>
-              </li>
-              <li>
-                <a href="#skills" id="nav-link__thre">
-                  Skills
-                </a>
-              </li>
-              <li>
-                <a href="#portfolio" id="nav-link__four">
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a href="#contact" id="nav-link__five">
-                  Contact
-                </a>
-              </li>
-            </ul>
-            
-            <SelectBox>
-              <OptionsContainer>
-                <Option>
-                  <div>
-                    <input type="radio" />
-                    <label>En</label>
-                  </div>
-                  <div>
-                    <input type="radio"/>
-                    <label>Ru</label>
-                  </div>
-                </Option>
-              </OptionsContainer>
-            </SelectBox>
-            
+            {MENU.map((res, index) => {
+              return (
+                <ul>
+                  <li>
+                    <a href={res.url}>{res.title}</a>
+                  </li>
+                </ul>
+              );
+            })}
             <Selected>Ru</Selected>
           </Links>
         </Container>
@@ -132,40 +121,6 @@ const Links = styled.div`
       }
     }
   }
-`;
-
-const navMedia = styled.div`
-  display: flex;
-`;
-
-const SelectBox = styled.div`
-  display: flex;
-  width: 85px;
-  flex-direction: column;
-  position: relative;
-  label {
-    cursor: pointer;
-    color: red;
-  }
-`;
-
-const OptionsContainer = styled.div`
-  background: #e2e6eea7;
-  color: #f5f6fa;
-  max-height: 0;
-  width: 100%;
-  opacity: 0;
-  transition: all 0.4s;
-  border-radius: 8px;
-  overflow: hidden;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  order: 1;
-`;
-
-const Option = styled(SelectBox)`
-  display: none;
 `;
 
 const Selected = styled.div`
