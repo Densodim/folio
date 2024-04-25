@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { GlobalStyled } from './components/GlobalStyled/GlobalStyled.tsx';
+import Header from './components/Header/header.tsx';
 
 
 class App extends Component {
@@ -7,7 +8,7 @@ class App extends Component {
     return (
       <>
       <GlobalStyled />
-      <div>Hello World</div>
+      <Header />
       </>
     );
   }
